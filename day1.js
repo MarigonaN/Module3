@@ -146,7 +146,9 @@ Write a JavaScript program to find the types of a given angle.
               console.log(angle_Type(180))
 
 // 13)Write a JavaScript program to find the index of the greatest element of a given array of integers
+const array1 = [1, 3, 2];
 
+console.log(Math.max(...array1));
 
 //14) Write a JavaScript program to get the largest even number from an array of integers.
 var array = [4 , 8, 60, 56, 50];
@@ -239,3 +241,7 @@ function acronym(text) {
   }
   
   console.log(acronym('Convert Phrase to Acronym'));
+
+
+
+ 
