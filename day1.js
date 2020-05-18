@@ -47,6 +47,14 @@ console.log(numbers_ranges(75, 99));
 console.log(numbers_ranges(50, 61));
 
 //6) Write a JavaScript program to create a new string of specified copies (positive number) of a given string.
+function string_copies (str, n) 
+{
+  if (n < 0)
+    return false;
+  else
+  return str.repeat(n);
+}
+console.log(string_copies("Strive", 5));
 
 //7) Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
 
