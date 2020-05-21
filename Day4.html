@@ -31,7 +31,7 @@
 
         <style>
             body{
-                background-color: whitesmoke;
+                background-color: black;
             }
         </style>
 </head>
@@ -42,13 +42,14 @@
         <button type="button" class="btn btn-primary mt-3" onclick="">Add to Cart</button>
        
         <div class="row" id="source">
+            
         
         
         </div>
 
     </div>
     <div class="container">
-        <h4>Order List</h4>
+        <h4 class="display-4" style="color: white; margin-top: 20px;">Order List</h4>
         <div class="row" id="destination">
         
         
@@ -73,13 +74,20 @@
              
                 
                 listItems.innerHTML+=`
+             
+                   
+            
+              
+                
                 <div class="card card mb-4 col-md-4 mt-3" >
                     <img src="${currElement.img}" class="card-img-top" alt="...">
                     <div class="card-body"> 
                         <a href="#" class="btn btn-primary skipbtn">Skip</a>
                         <button type="button" class="btn addbtn btn-primary"> Add to Cart</button>
+                        
                     </div>
-                    </div>`
+                    </div>
+                   `
                  
                 const hide =document.querySelectorAll(".skipbtn")
                 for (let i = 0; i < hide.length; i++) {
@@ -91,14 +99,17 @@
                 
                 let orders = document.querySelectorAll('.addbtn')
                 
-                let dest =document.querySelector("#destination")
+                let des =document.querySelector("#destination")
                 source=listItems
                 for (let i = 0; i < orders.length; i++) {
                       
                       orders[i].addEventListener("click", function(e) {
-                        dest.innerHTML += 
-                          `<div class="col col-md-3 card mb-4 shadow-sm">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src=${e.currentTarget.parentNode.parentNode.querySelector('img').src} />
+                        des.innerHTML += 
+                          `
+                          
+                          <div class="col col-md-3 card mb-4 shadow-sm">
+                            
+                                <img class="bd-placeholder-img card-img-top" width="100%"  src=${e.currentTarget.parentNode.parentNode.querySelector('img').src} />
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary removeCart">
@@ -107,6 +118,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             `
                             const removeCart =document.querySelectorAll(".removeCart")
                             for (let i = 0; i < removeCart.length; i++) {
