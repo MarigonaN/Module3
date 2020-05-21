@@ -61,10 +61,10 @@
         fetch(url).then(response => response.json())
         .then(data =>{ 
             data.forEach((currElement) => {
-                //let outerDiv = document.createElement('div')
+               
                 let listItems = document.querySelector('.row')
                 
-                //outerDiv.className= 'col-md-4'
+             
                 
                 listItems.innerHTML+=`
                 <div class="card card mb-4 col-md-4 mt-3" >
@@ -74,7 +74,7 @@
                         <button type="button" class="btn addbtn btn-primary"> Add Cart</button>
                     </div>
                     </div>`
-                //listItems.appendChild(outerDiv)    
+                 
                 const hide =document.querySelectorAll(".skipbtn")
                 for (let i = 0; i < hide.length; i++) {
                       
@@ -117,7 +117,7 @@
              
                    
                   
-             //console.log(data)
+        
         });
         
     }
