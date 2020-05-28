@@ -43,7 +43,7 @@ const saveEvent = async (agendaEvent) => {
     <div class="mr-0">
     <tr>
     
-      <th scope="row">${productInfo._id}</th>
+      <th scope="row"><a href = "Edit_Delete_Page.html">${productInfo._id}</a></th>
       
       <td>${productInfo.name}</td>
       <td>${productInfo.description}</td>
