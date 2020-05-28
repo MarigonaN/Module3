@@ -19,11 +19,65 @@ const getData= async () => {
             
         }
     }catch(error) {
-
     }
-    
-   
 }
+const getProduct = async (id) => {
+    let response = await fetch(url + id, {
+        "method": "GET",
+        "headers": {
+            "Authorization": "Basic " + btoa('user19:Hxx8R4wZfCANamrj')}
+      });
+      try {
+        if(response.ok) {
+        let product = await response.json()
+        return product
+         } 
+      } catch(error) {
+          
+      }
+    
+     
+  }
+  const deleteProduct =async (id) => {
+     
+    try {
+       let response = await fetch(url + id, {
+           method: "DELETE",
+           "headers": {
+               "Authorization": "Basic " + btoa('user19:Hxx8R4wZfCANamrj')},
+         
+       });
+       if(response.ok) {
+           alert('You have successfully deleted the product')
+           location.assign("index.html");
+       }
+    }catch (error) {
+        alert ('you can not delete the product')
+    }
+  
+}
+
+const updateProduct =async (id) => {
+     
+    try {
+       let response = await fetch(url + id, {
+           method: "PUT",
+           "headers": {
+            "Authorization": "Basic " + btoa('user19:Hxx8R4wZfCANamrj')},
+         
+       });
+       if(response.ok) {
+           
+           location.assign("upload_data.html");
+       }
+    }catch (error) {
+        
+    }
+  
+}
+
+
+
 
 const saveEvent = async (agendaEvent) => {
     let response = await fetch(url, {
@@ -43,7 +97,7 @@ const saveEvent = async (agendaEvent) => {
     <div class="mr-0">
     <tr>
     
-      <th scope="row"><a href = "Edit_Delete_Page.html">${productInfo._id}</a></th>
+      <th scope="row"><a href = "Edit_Delete_Page.html?id=${productInfo._id}">${productInfo._id}</a></th>
       
       <td>${productInfo.name}</td>
       <td>${productInfo.description}</td>
