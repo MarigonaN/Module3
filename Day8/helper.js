@@ -53,19 +53,8 @@ const saveEvent = async (agendaEvent) => {
       <td>$${productInfo.price}</td>
       <td>${productInfo.userId}</td>
       <td>${productInfo.createdAt}</td>
-      <td>${productInfo.updatedAt}
-      
-      </td>
-      <td>
-      <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-warning">edit</button>
-    <button type="button" class="btn btn-danger ml-3">delete</button>
-    </div>
-      
-      </td>
-      
-      </td>
-        
+      <td>${productInfo.updatedAt}</td>
+     
     </tr>
     
     </div>
