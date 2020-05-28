@@ -81,7 +81,7 @@ const saveEvent = async (agendaEvent) => {
        
         
         if(response.ok) {
-            location.assign("marketing.html");
+            location.assign("index.html");
         }else {
             let error = await response.json()
            if (Object.keys(error.error.errors).includes('name')) {
