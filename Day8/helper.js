@@ -98,9 +98,13 @@ const saveEvent = async (agendaEvent) => {
        
         
         if(response.ok) {
+            alert('You have succesfully added the product')
             location.assign("index.html");
         }else {
+            
             let error = await response.json()
+            alert('Please fill out the form')
+           
            if (Object.keys(error.error.errors).includes('name')) {
                nameInput.classList.add('is-invalid')
            } 
