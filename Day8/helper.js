@@ -40,6 +40,7 @@ const saveEvent = async (agendaEvent) => {
 
   const createRow =(productInfo)=> {
     let row=`
+    <div class="mr-0">
     <tr>
       <th scope="row">${productInfo._id}</th>
       <td>${productInfo.name}</td>
@@ -52,6 +53,7 @@ const saveEvent = async (agendaEvent) => {
       <td>${productInfo.updatedAt}</td>
 
     </tr>
+    </div>
     `
     return row;
   }
