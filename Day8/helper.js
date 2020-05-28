@@ -42,17 +42,30 @@ const saveEvent = async (agendaEvent) => {
     let row=`
     <div class="mr-0">
     <tr>
+    
       <th scope="row">${productInfo._id}</th>
+      
       <td>${productInfo.name}</td>
       <td>${productInfo.description}</td>
       <td>${productInfo.brand}</td>
-      <td ><img src="${productInfo.imageUrl}" alt="" class="image-fluid" style="max-height: 10rem;"></td>
+      <td ><img src="${productInfo.imageUrl}" alt="" class="image-fluid" style="max-height: 10rem;">
+      </td>
       <td>$${productInfo.price}</td>
       <td>${productInfo.userId}</td>
       <td>${productInfo.createdAt}</td>
-      <td>${productInfo.updatedAt}</td>
-
+      <td>${productInfo.updatedAt}
+      
+      </td>
+      <td>
+      <button type="button" class="btn btn-warning">edit</button>
+    <button type="button" class="btn btn-danger">delete</button>
+      
+      </td>
+      
+      </td>
+        
     </tr>
+    
     </div>
     `
     return row;
