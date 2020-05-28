@@ -57,8 +57,10 @@ const saveEvent = async (agendaEvent) => {
       
       </td>
       <td>
+      <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-warning">edit</button>
-    <button type="button" class="btn btn-danger">delete</button>
+    <button type="button" class="btn btn-danger ml-3">delete</button>
+    </div>
       
       </td>
       
