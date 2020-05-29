@@ -68,7 +68,7 @@ const updateProduct =async (id) => {
        });
        if(response.ok) {
            
-           location.assign("upload_data.html");
+          window.location.href = "upload_data.html?id=" + id;
        }
     }catch (error) {
         
@@ -76,7 +76,10 @@ const updateProduct =async (id) => {
   
 }
 
-
+const handleSubmit = async() => {
+    event.preventDefault();
+    submitEvent();
+  }
 
 
 const saveEvent = async (agendaEvent) => {
@@ -117,10 +120,7 @@ const saveEvent = async (agendaEvent) => {
   }
 
 
-  const handleSubmit = async() => {
-    event.preventDefault();
-    submitEvent();
-  }
+  
 
  const submitEvent = async() => {
     let nameInput= document.querySelector("#name")
